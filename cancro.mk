@@ -223,6 +223,9 @@ PRODUCT_PACKAGES += librecovery_updater_cancro
 PRODUCT_PACKAGES += \
     Gello
 
+# Doze
+PRODUCT_PACKAGES += \
+    CancroDoze
 
 # Permissions
 PRODUCT_COPY_FILES += \
