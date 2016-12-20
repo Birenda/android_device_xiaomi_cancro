@@ -55,6 +55,7 @@ TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_CONFIG               := cyanogen_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
+TARGET_WANTS_DTIMAGE_BUILT := true
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE       := true
