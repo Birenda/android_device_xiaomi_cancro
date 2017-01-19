@@ -25,7 +25,7 @@ import android.util.Log;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
     private static final String TAG = "SettingsDevice";
 
     @Override

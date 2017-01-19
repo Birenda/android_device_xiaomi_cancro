@@ -39,7 +39,7 @@ import cyanogenmod.providers.CMSettings;
 
 public class SensorsDozeService extends Service {
 
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
     public static final String TAG = "SensorsDozeService";
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
