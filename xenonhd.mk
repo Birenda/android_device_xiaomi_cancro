@@ -33,7 +33,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI Cancro
 
-WITH_SUPERSU := true
+#Stock root
+WITH_SU := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
