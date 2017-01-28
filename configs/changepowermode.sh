@@ -43,7 +43,6 @@ case "$powermode" in
         echo 40            > /sys/module/cpu_boost/parameters/input_boost_ms
         echo 578000000     > /sys/class/kgsl/kgsl-3d0/max_gpuclk
         echo performance   > /sys/class/kgsl/kgsl-3d0/devfreq/governor
-        echo 255           > /sys/class/leds/lcd-backlight/max_brightness
         echo "msm_cpufreq" > $dev_governor
         case "$target" in
             "MI 3W")
@@ -78,7 +77,6 @@ case "$powermode" in
         echo 20                                  > /sys/module/cpu_boost/parameters/boost_ms
         echo 1190400                             > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40                                  > /sys/module/cpu_boost/parameters/input_boost_ms
-        echo 255                                 > /sys/class/leds/lcd-backlight/max_brightness
         echo 578000000                           > /sys/class/kgsl/kgsl-3d0/max_gpuclk
         echo msm-adreno-tz                       > /sys/class/kgsl/kgsl-3d0/devfreq/governor
         echo "cpubw_hwmon"                       > $dev_governor
@@ -125,7 +123,7 @@ case "$powermode" in
         echo 960000         > /sys/module/cpu_boost/parameters/sync_threshold
         echo 960000         > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40             > /sys/module/cpu_boost/parameters/input_boost_ms
-        echo 100            > /sys/class/leds/lcd-backlight/max_brightness
+        echo 100            > /sys/class/leds/lcd-backlight/brightness
         echo 330000000      > /sys/class/kgsl/kgsl-3d0/max_gpuclk
         echo msm-adreno-tz  > /sys/class/kgsl/kgsl-3d0/devfreq/governor
         echo "cpubw_hwmon"  > $dev_governor
