@@ -72,9 +72,9 @@ case "$target" in
                 echo "interactive" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
                 echo "interactive" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
                 echo "interactive" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-                echo "19000 1400000:39000 1700000:19000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-                echo 99 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-                echo 1497600 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+                echo "20000 1400000:40000 1700000:20000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+                echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+                echo 1190400 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
                 echo 1497600 > /sys/devices/system/cpu/cpufreq/interactive/input_boost_freq
                 echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
                 echo "85 1500000:90 1800000:70" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
@@ -88,7 +88,7 @@ case "$target" in
 		echo '1' > /sys/kernel/fast_charge/force_fast_charge
 		echo '260' > /sys/devices/platform/kcal_ctrl.0/kcal_sat
 		echo 'Y' > /sys/module/adreno_idler/parameters/adreno_idler_active
-                setprop ro.qualcomm.perf.cores_online 1
+                setprop ro.qualcomm.perf.cores_online 2
 		# Fuck the YOTA
 		# Use kernel feature
 		su -c iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
@@ -111,6 +111,10 @@ case "$target" in
                 echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
             ;;
         esac
+        echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 300000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq        
         echo 1 > /sys/kernel/msm_thermal/enabled
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
@@ -157,7 +161,7 @@ case "$target" in
         chown system.system /sys/module/cpu_boost/parameters/sync_threshold
         chown system.system /sys/module/cpu_boost/parameters/input_boost_freq
         chown system.system /sys/module/cpu_boost/parameters/input_boost_ms
-        echo 0 > /dev/cpuctl/apps/cpu.notify_on_migrate
+        echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
         start mpdecision
         setprop sys.perf.profile `getprop sys.perf.profile`
 	#permissions for charger_monitor
@@ -179,6 +183,7 @@ esac
 # Post-setup services
 case "$target" in
     "msm8974")
+        rm /data/system/perfd/default_values
         echo 896 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
 esac
