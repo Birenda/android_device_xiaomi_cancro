@@ -21,6 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common XenonHD stuff.
 $(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
+
 #XenonHD
 PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer=DrRamm
 
@@ -32,8 +33,6 @@ PRODUCT_DEVICE := cancro
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI Cancro
-
-WITH_SUPERSU := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
