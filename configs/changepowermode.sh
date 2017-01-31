@@ -117,5 +117,6 @@ case "$powermode" in
         echo 1036800       > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
         echo 1036800       > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
         echo 1036800       > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+	echo 15            > /sys/class/leds/lcd-backlight/brightness
         ;;
 esac
