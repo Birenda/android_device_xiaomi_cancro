@@ -14,3 +14,5 @@
 # limitations under the License.
 #
 add_lunch_combo cm_cancro-userdebug
+add_lunch_combo cm_cancro-user
+add_lunch_combo cm_cancro-eng
