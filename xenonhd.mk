@@ -25,6 +25,8 @@ $(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
 #XenonHD
 PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer=DrRamm
 
+ROOT_METHOD=su
+
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
