@@ -27,6 +27,10 @@ PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer=DrRamm
 
 ROOT_METHOD=su
 
+PRODUCT_PACKAGES += \
+    Adaway \
+    KernelAdiutor
+
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
