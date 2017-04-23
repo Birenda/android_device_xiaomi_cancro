@@ -323,4 +323,7 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
+    
+    <!-- Night display  -->
+    <bool name="config_nightDisplayAvailable">true</bool>
 </resources>
