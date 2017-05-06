@@ -238,6 +238,9 @@ PRODUCT_PACKAGES += librecovery_updater_cancro
 PRODUCT_PACKAGES += \
     Gello
 
+# ZRAM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.zram=true
 
 # Permissions
 PRODUCT_COPY_FILES += \
