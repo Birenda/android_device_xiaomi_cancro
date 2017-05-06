@@ -193,10 +193,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
-
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
-
+ 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(OTA_TYPE),Official)
 WITH_DEXPREOPT := true
