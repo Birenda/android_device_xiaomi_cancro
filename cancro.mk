@@ -9,6 +9,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.zram \
+    init.zram.rc \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
