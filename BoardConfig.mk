@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 BOARD_VENDOR := xiaomi
+#USE_NINJA := false
 
 CANCRO_PATH := device/xiaomi/cancro
 
@@ -55,6 +56,7 @@ TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_CONFIG               := lineageos_cancro_defconfig 
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
+TARGET_WANTS_DTIMAGE_BUILT         := true
 
 # Kernel headers
 TARGET_BOARD_KERNEL_HEADERS := $(CANCRO_PATH)/kernel-headers
