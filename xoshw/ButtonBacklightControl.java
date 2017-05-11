@@ -26,6 +26,7 @@ public class ButtonBacklightControl extends IButtonBacklightControl {
     public ButtonBacklightControl() {
         CONTROL_TYPE = CONTROL_TYPE_PARTIAL;
 	HAVE_TWO_BACKLIGHT_PATHS = true;
+	MAXIMUM_BRIGHTNESS = 255;
     }
 
 }

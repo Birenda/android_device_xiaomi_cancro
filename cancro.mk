@@ -42,8 +42,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8974 \
-    libxml2 \
-    Snap
+    libxml2 
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -234,10 +233,6 @@ PRODUCT_PACKAGES += \
 
 # Baseband assertion
 PRODUCT_PACKAGES += librecovery_updater_cancro
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \

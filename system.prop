@@ -58,7 +58,7 @@ persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=false
 af.fast_track_multiplier=1
 audio_hal.period_size=192
-audio.offload.buffer.size.kb=32
+audio.offload.buffer.size.kb=64
 
 ro.qualcomm.perf.cores_online=1
 dalvik.vm.dex2oat-swap=false
@@ -95,3 +95,10 @@ ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
 ro.sys.sdcardfs=true
+###      Tweaks and UX improvements      ###
+#  exclusively made by the halogenOS team  #
+
+# Higher fling velocities to smooth scrolling
+# and provide better responsiveness
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
